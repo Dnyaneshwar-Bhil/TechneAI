@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CustomerOrder by groups]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GRP-testGroupB,testGroupA(failed)">
+    <groups>
+      <run>
+        <include name="testGroupB"/>
+        <include name="testGroupA"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.co.testlayer.RunCreateOrder">
+        <methods>
+          <include name="testCreateOrderFunctionality"/>
+          <include name="testVerifyCreateOrderFunctionalityWithAddingStoneDetails"/>
+        </methods>
+      </class> <!-- com.co.testlayer.RunCreateOrder -->
+      <class name="com.co.testlayer.RunCreateOrderE2E">
+        <methods>
+          <include name="testCreateOrderFunctionality"/>
+        </methods>
+      </class> <!-- com.co.testlayer.RunCreateOrderE2E -->
+    </classes>
+  </test> <!-- GRP-testGroupB,testGroupA(failed) -->
+</suite> <!-- Failed suite [CustomerOrder by groups] -->

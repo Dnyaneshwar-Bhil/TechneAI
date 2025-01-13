@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+
+	<test thread-count="5" name="Test1">
+		<groups>
+			<run>
+				<!--	<include name="Masters" />
+				<include name="Module" />
+				<include name="SubModule" />
+				<include name="Report" />
+				<include name="Admin" />
+				<include name="UI" />
+				<include name="Funtional_Validation" />
+-->
+				<include name="Funtional" />
+				<exclude name="Validation" />
+
+			</run>
+		</groups>
+		<classes>
+			<class name="com.co.testlayer.RunCreateOrder" />
+			<class name="com.co.testlayer.RunCreateOrderE2E" />
+		</classes>
+	</test>
+
+	<!--We can create diff suite also like according to levels of testing 
+	1.Unit testing
+	2.Integration testing
+    3.System testing
+	4.Acceptance testing
+	-->
+
+	<test thread-count="5" name="Test2">
+		<groups>
+			<run>
+				<include name="Funtional" />
+			</run>
+		</groups>
+		<classes>
+
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Test3">
+		<groups>
+			<run>
+				<include name="Funtional" />
+			</run>
+		</groups>
+		<classes>
+
+		</classes>
+	</test>
+</suite> 
